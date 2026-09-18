@@ -3,6 +3,7 @@
 import { Newsreader, Hanken_Grotesk } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
+import { Analytics } from '@vercel/analytics/next'
 
 const newsreader = Newsreader({ subsets: ['latin'], variable: '--font-serif', display: 'swap' })
 const hanken = Hanken_Grotesk({ subsets: ['latin'], variable: '--font-sans', display: 'swap' })
@@ -80,6 +81,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )
